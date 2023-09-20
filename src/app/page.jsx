@@ -22,7 +22,7 @@ export default function Home() {
   return (
     <main className=" bg-DarkBlue h-screen w-screen flex justify-center lg:items-center ">
       {loader == true ? (
-        <div>loading...</div>
+        <div class="lds-hourglass m-auto"></div>
       ) : (
         <div className=" h-max min-h-[320px] lg:[335px] relative w-[345px] lg:w-[540px] flex flex-col items-center bg-[#313A49] bg rounded-xl mt-[133px] lg:mt-0 ">
           <div className="flex flex-col items-center mt-[45px] mx-[30px]">
