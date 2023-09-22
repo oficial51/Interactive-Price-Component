@@ -57,16 +57,18 @@ export default function Home() {
           )}
         </div>
 
-        <input
-          id="first_name"
-          type="range"
-          min="10000"
-          onMouseUp={quit}
-          onChange={changeValue}
-          step="10000"
-          max="200000"
-          className=" .slider-progress mt-[34px] cursor-grab focus:cursor-grabbing scale-105 "
-        />
+        <label htmlFor="">
+          <input
+            id="first_name"
+            type="range"
+            min="10000"
+            onMouseUp={quit}
+            onChange={changeValue}
+            step="10000"
+            max="200000"
+            className=" .slider-progress mt-[34px] cursor-grab focus:cursor-grabbing scale-105 "
+          />
+        </label>
 
         <div className=" flex items-center mt-[37px]">
           {size.width > 800 ? null : (
