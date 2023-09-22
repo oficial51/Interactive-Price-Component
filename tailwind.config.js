@@ -13,11 +13,12 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
-        LightCyan: "hsl(193, 38%, 86%)",
-        NeonGreen: "hsl(150, 100%, 66%)",
-        GrayishBlue: "hsl(217, 19%, 38%)",
-        DarkGrayishBue: "hsl(217, 19%, 24%)",
-        DarkBlue: "hsl(218, 23%, 16%)",
+        White : 'hsl (0, 0%, 100%)', //(PricingComponentBackground)
+        VeryPaleBlue : 'hsl(230, 100%, 99%)', //(Main Background)
+        LightGrayishBlue : 'hsl(224, 65%, 95%)', //(Empty Slider Bar)
+        LightGrayishBlue : 'hsl(223, 50%, 87%)' ,//(Toggle Background)
+        GrayishBlue : 'hsl(225, 20%, 60%)', //(Text)
+        DarkDesaturatedBlue : 'hsl(227, 35%, 25%)', //(Text & CTA Background)
       },
     },
   },

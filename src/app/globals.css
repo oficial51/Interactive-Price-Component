@@ -1,3 +1,175 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@media screen and (min-width: 1000px){.titulo{
+  font-size: 28px;
+}}
+
+.discount{
+  font-size: 10px;
+}
+
+.texto{font-size: 15px}
+.space{
+  letter-spacing: 3px;
+}
+
+.circles{
+  background-image: url('../../public/pattern-circles.svg');
+  background-position-y: 75px;
+}
+
+/********** Range Input Styles **********/
+/*Range Reset*/
+input[type="range"] {
+  -webkit-appearance: none;
+   appearance: none;
+   background: transparent;
+
+   width: 280px;
+}
+@media screen and (min-width: 1000px){
+  input[type="range"]{
+    width: 415px;
+  }
+}
+
+/* Removes default focus */
+input[type="range"]:focus {
+ outline: none;
+}
+
+/***** Chrome, Safari, Opera and Edge Chromium styles *****/
+/* slider track */
+input[type="range"]::-webkit-slider-runnable-track {
+  background-color: hsl(224, 65%, 95%);
+  border-radius: 0.5rem;
+  height: 0.5rem;
+}
+
+/* slider thumb */
+input[type="range"]::-webkit-slider-thumb {
+ -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  margin-top: -17px; /* Centers thumb on the track */
+
+  /*custom styles*/
+  background-color: hsl(174, 86%, 45%);
+  height: 42px;
+  width: 42px;
+  border-radius: 100%;
+  filter: drop-shadow(1px 10px 22px hsl(174, 86%, 45%));
+  background-image: url(../../public/icon-slider.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 25px;
+}
+
+
+
+/******** Firefox styles ********/
+/* slider track */
+input[type="range"]::-moz-range-track {
+  background-color: hsl(224, 65%, 95%);
+  border-radius: 0.5rem;
+  height: 0.5rem;
+}
+
+/*Pogress*/
+input[type="range"]::-moz-range-progress {
+  background-color: hsl(174, 77%, 80%); 
+  height: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+/* slider thumb */
+input[type="range"]::-moz-range-thumb {
+  border: none; /*Removes extra border that FF applies*/
+  border-radius: 0; /*Removes default border-radius that FF applies*/
+
+  /*custom styles*/
+  background-color: hsl(174, 86%, 45%);
+  height: 42px;
+  width: 42px;
+  border-radius: 100%;
+  filter: drop-shadow(1px 10px 22px hsl(174, 86%, 45%));
+  background-image: url(../../public/icon-slider.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 25px;
+  
+  
+}
+
+input[type="range"]::-moz-range-thumb:hover{
+  filter: drop-shadow(1px 10px 1000px hsl(0, 0%, 0%));
+  --tw-scale-x: 1.05;
+  --tw-scale-y: 1.05;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transition: all;
+  transition-duration: 300;
+  transition-timing-function: ease-in-out;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+ /* The switch - the box around the slider */
+ .switch {
+  position: relative;
+  display: inline-block;
+  width: 45px;
+  height: 22px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsl(223, 50%, 87%);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #7CE8DE;
+}
+
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(22px);
+  -ms-transform: translateX(22px);
+  transform: translateX(22px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+} 
