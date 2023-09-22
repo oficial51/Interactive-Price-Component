@@ -6,6 +6,13 @@
   font-size: 28px;
 }}
 
+.bgblue{
+  background-image: url('../../public/bg-pattern.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
 .discount{
   font-size: 10px;
 }
